@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kodekurs</title>
+</head>
+
+<body>
+	
+<h1>Kodekurs</h1>
+<div id="code-output"></div>
+
+<script>
+
+// --- Definere en variabel ---
+// var string = "Axel";
+// var number = 14;
+// var boolean = false;
+// var array = ["Anna", "Axel", "Hampus"];
+// var object = {
+// 	name: "Axel Filip",
+// 	birthyear: 2004
+// }
+
+// --- Løkke / Loop ---
+// for (var i=0; i<10; i++){
+// 	sayHello(i);
+// }
+
+// Definere en funksjon
+// function doSomething(argument){
+// 	console.log(argument);
+// }
+
+function sayHello(person, birthyear) {
+	if (birthyear) {
+		// Regn ut alder
+		var age = 2018 - birthyear;
+	} else {
+		var age = "many"
+	}
+
+	let greeting = "Hei " + person + " you are " + age + " years old";
+
+	// Skriv tekst til nettsiden
+	var tag = document.createElement("pre");
+	tag.innerText = greeting;
+	document.getElementById("code-output").appendChild(tag);
+}
+
+// Funksjon: si hei for hvert navn
+function writeHellos(people){
+	for (var i=0; i<people.length; i++){
+		sayHello( people[i].name, people[i].birthyear );
+	}
+}
+
+
+// --- Når programmet kjører ---
+
+// Spørre om navnet
+var promptName = prompt("What is your name?");
+var promptBirth = prompt("When are you born?")
+
+// Skrive navnet på nettsiden
+sayHello(promptName, promptBirth);
+
+</script>
+
+</body>
+</html>

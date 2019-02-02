@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kodekurs 2</title>
+</head>
+<body>
+
+	<!-- Tittelen -->
+	<h1>Kalkulator</h1>
+
+	<!-- Tekstfeltene -->
+	<input type="text" id="input-a" placeholder="Tall a">
+	<input type="text" id="input-b" placeholder="Tall b">
+
+	<!-- Knappene -->
+	<input type="button" value="*" onclick="multiply()">
+	<input type="button" value="-" onclick="subtract()">
+	<input type="button" value="+" onclick="add()">
+	<input type="button" value="/" onclick="divide()">
+
+	<!-- Resultatfeltet -->
+	<pre id="output"></pre>
+
+
+	<!-- Koden som gjør utregninger -->
+	<script>
+
+		// --- Spør om teksten i tekstfeltene ---
+
+		function getA () {
+			return parseFloat( document.getElementById ("input-a").value );
+		} 
+
+		function getB () {
+			return parseFloat( document.getElementById ("input-b").value );
+		}
+
+
+		// --- Mattefunksjonene ---
+
+		function add (){
+			var result = getA() + getB();
+			writeResult (result)
+		}
+		function divide (){
+			var result = getA() / getB();
+			writeResult (result);
+		}
+		function multiply (){
+			var result = getA() * getB();
+			writeResult (result);
+		}
+		function subtract (){
+			var result = getA() - getB();
+			writeResult (result);
+		}
+
+
+		// --- Skriv resultatet på nettsiden ---
+
+		function writeResult (result){
+			document.getElementById("output").innerText = result;
+		}
+
+	</script>
+</body>
+</html>
