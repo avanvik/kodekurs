@@ -10,16 +10,18 @@
 </head>
 <body>
 		<h1>Utfordring 02</h1>
-		<a href="../index.html">👈 Tilbake til index</a>
+		<a href="../index.html" class="btn">👈 Tilbake til index</a>
 
 		<h2>🎲 Lag en terningsapp</h2>
-		<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven. Det er lov å Google ting</p>
+		<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven.</p> 
+		<p>Det er lov å Google ting, men prøv så godt du klarer å <strong>ikke copy-paste kode</strong> fra eksemplene. Hvis du skriver selv så lærer du bedre.</p>
+		<p><strong>NB!</strong> Behold output()-funksjonen fra <a href="utfordring-1.html">forrige oppgave</a>.</p>
 		<hr>
 
 		<p>Fysiske terninger er for bønder og uteliggere. Vi kan lage en med kode i stedet! Her er et eksempel. Se hvordan terningene endrer seg når du laster nettsiden på nytt:</p>
-		<pre id="my-output"></pre>
+		<pre id="my-output" class="result"></pre>
 		
-		<ol>
+		<ol class="step-list">
 			<li>
 				<p>Lag en funksjon som heter <code>throwDice()</code></p>
 				<pre class="pre-block">
@@ -34,7 +36,9 @@ function throwDice() {
 function throwDice() {
 	var random = Math.random()
 	output(random)
-}</pre>
+}
+
+throwDice()</pre>
 			<pre id="r1" class="result"></pre>
 			</li>
 			
@@ -44,8 +48,16 @@ function throwDice() {
 function throwDice() {
 	var random = Math.random() * 6
 	output(random)
-}</pre>
+}
+
+throwDice()</pre>
 			<pre id="r2" class="result"></pre>
+
+			<div class="task-block">
+				<strong>Prøv deg på denne nøtta:</strong>
+				<div>Klarer du å justere koden så den viser tall fra 0 til 10?</div>
+				<div>Hva med 10 til 20?</div>
+			</div>
 			</li>
 			
 			<li>
@@ -56,7 +68,9 @@ function throwDice() {
 	var result = Math.ceil(random)
 	
 	output(random)
-}</pre>
+}
+
+throwDice()</pre>
 			<pre id="r3" class="result"></pre>
 			</li>
 			
@@ -68,51 +82,61 @@ function throwDice() {
 	var result = '🎲 ' + Math.ceil(random)
 	
 	output(random)
-}</pre>
+}
+
+throwDice()</pre>
 			<pre id="r4" class="result"></pre>
 			</li>
 			
 			<li>
 				<p>Så spør pappa om dere skal spille Yatzi. MEN YATZI BRUKER JO MANGE TERNINGER, IKKE BARE EN! Da må vi modifisere koden vår litt.</p>
-				<p>I JavaScript finnes noe som heter "løkker", eller "loops" på engelsk. Det finnes flere typer løkker, men den du har lært før bruker en teller <code>i</code> for å gjenta kode <code>i</code> antall ganger.</p>
+				<p>I JavaScript finnes noe som heter "løkker", eller "loops" på engelsk. Det finnes flere typer løkker, men den du har lært før bruker en teller <code>i</code> for å gjenta kode et visst antall ganger.</p>
 				<p><strong>For eksempel</strong> En løkke som skriver "Hei" 10 ganger lager man slik:</p>
 				<pre class="pre-block">
 for (var i=0; i&lt;10; i++){
 	output("Hei")
 }</pre>
+			<div class="task-block">
+				<strong>Før du sjekker fasit, prøv deg på denne nøtta:</strong>
+				<div>Bruk en løkke for å "kaste" flere terninger</div>
+			</div>
 		
-			<p>Dette kan vi bruke for å kaste <code>i</code> antall terninger. Vi kan også gi funksjonen vår et argument som forteller hvor mange terninger som skal kastes.</p>
+			<h3>Fortsettelse</h3>
+			<p>Vi kan bruke en løkke for å kaste terningene flere ganger. Vi kan også gi funksjonen vår et argument som forteller hvor mange ganger løkka skal gjentas, altså hvor mange terninger som skal kastes.</p>
 			<pre class="pre-block">
 function throwDice(numberOfDice) {
-	for (var i=0; i&lt;numberOfDice; i++){
+	<code>for (var i=0; i&lt;numberOfDice; i++){</code>
 		var random = Math.random() * 6
 		var result = '🎲 ' + Math.ceil(random)
 		
 		output(result)
-	}
-}</pre>
+	<code>}</code>
+}
+
+throwDice(2)</pre>
 			<pre id="r5" class="result"></pre>
 			</li>
-			
+
 			<li>
-				<p>Hvis vi vil vise terningene på samme linje kan vi modifisere koden slik</p>
-				<pre class="pre-block">
-function throwDice(numberOfDice) {
-	var <code>totalResult = ''</code>
-	
-	for (var i=0; i&lt;numberOfDice; i++){
-		var random = Math.random() * 6
-		var result = '🎲 ' + Math.ceil(random)
-		
-		totalResult += result + '  '
-	}
-	
-	output( <code>totalResult</code> )
-}</pre>
-			<pre id="r6" class="result"></pre>
+				<p>Frem til nå har vi måttet laste siden på nytt for å "kaste" terningene. Det hadde vært mye bedre med en knapp som gjorde dette!</p> 
+				<p>Legg til et <code>button</code>-element i html-koden. Gi så knappen et <code>onclick</code>-attributt som kjører funsjonen throwDice(2)</p>
+
+				<pre class="pre-block">&lt;button onclick="throwDice(2)"&gt;Kast terningene&lt;button&gt;</pre>
 			</li>
-		</ol>
+	</ol>
+
+	<hr>
+
+	<h2>👨🏼‍💻 Ekstraoppgaver</h2>
+	<ol>
+		<li>Skriv CSS så terningene og teksten blir mye større. Bruk et <code>h1</code>-element for å lage en tittel på siden og en <code>p</code>-tag for å beskrive hva terningen gjør.</li>
+		<li>Modifiser funksjonen throwDice() så terningene skrives på samme linje</li>
+		<li>Bruk en <code>if</code>-setning for å skrive "Wow du fikk en sekser" hvis en av terningene viser 6</li>
+	</ol>
 </body>
+
+
+
 
 <script>
 const randomNumber = Math.random()

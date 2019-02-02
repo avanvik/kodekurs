@@ -10,50 +10,65 @@
 </head>
 <body>
 	<h1>Utfordring 01</h1>
-	<a href="../index.html">👈 Tilbake til index</a>
+	<a href="../index.html" class="btn">👈 Tilbake til index</a>
 		
-	<h2>👨🏼‍💻 Bruk javascript for å skrive til nettsiden</h2>
-	<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven. Det er lov å Google ting</p>
+	<h2>📝 Bruk javascript for å skrive til nettsiden</h2>
+	<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven.</p> 
+	<p>Det er lov å Google ting, men prøv så godt du klarer å <strong>ikke copy-paste kode</strong> fra eksemplene. Hvis du skriver selv så lærer du bedre.</p>
 	<hr>
 
-	<ol>
+	<ol class="step-list">
 		<li>
 			<p>Lag et html-element av typen <code>pre</code>, med id="my-output"</p>
-			<pre class="pre-block">&lt;pre id="my-putput"&gt; &lt;/pre&gt;</pre>
+			<pre class="pre-block">&lt;pre id="my-output"&gt; &lt;/pre&gt;</pre>
 	
-			<p>I JavaScript, skriv følgende kode for å skrive "Hello World" i pre-elementet på nettsiden. Trykk på "Run" for å kjøre koden.</p>
-			<p><strong>Husk: </strong><code>+=</code> LEGGER TIL, <code>=</code> OVERSKRIVER</p>
-			<pre class="pre-block">document.getElementById('my-output').innerHTML += "Hello World"</pre>
+			<p>I JavaScript, skriv følgende kode for å skrive "Hello World" i pre-elementet på nettsiden. Selve <code>document.getElementById</code>-delen trenger du ikke å skjønne ennå. Trykk på "Run" for å kjøre koden.</p>
+			<pre class="pre-block">
+document.getElementById('my-output').innerHTML <code title="+= legger til, = overskriver">+=</code> "Hello World"</pre>
+			<pre class="result">Hello World</pre>
 		</li>
 		
 		<li>
 			<p>Dette er noe vi kan gjenbruke! La oss lage en funksjon for å skrive ting til nettsiden. Funksjonen kan hete <code>output()</code>. Legg til en &lt;br&gt; for å skrive på ny linje hver gang funsjonen kjører.</p>
+
 			<pre class="pre-block">
 function output() {
 	document.getElementById('my-output').innerHTML += "Hello World" + "&lt;br&gt;"
-}</pre>
-		</li>
-		
-		<li>
-			<p>Denne funksjonen skriver jo kun "Hello World". For å kunne skrive hva som helst hadde det vært lurt å bruke en variabel her. En variabel som settes når man kjører en funksjon kalles et "argument". Slik:</p>
-			<pre class="pre-block">
-function output(<code>axelsText</code>) {
-	document.getElementById('my-output').innerHTML += <code>axelsText</code> + "&lt;br&gt;"
-}</pre>
-		</li>
-		
-		<li>
-			<p>Nå har vi kun definert funksjonen. For å kjøre den må vi også skrive 			
-			<code>output()</code> etterpå, med en tekststreng som argument.</p>
-		<pre class="pre-block">
-function output(axelsText) {
-	document.getElementById('my-output').innerHTML += axelsText
 }
-	
-<code>output('Axel koder som en 👵🏻')</code></pre>
+
+output()</pre>
+			<pre class="result">Hello World</pre>
+		</li>
+		
+		<li>
+			<p>Denne funksjonen skriver jo kun "Hello World". For å kunne skrive hva som helst hadde det vært lurt å bruke en variabel her. En variabel som settes når man kjører en funksjon kalles et "argument".</p>
+
+			<div class="task-block">
+				<strong>Før du sjekker fasit, prøv deg på denne nøtta:</strong>
+				<div>Juster funksjonen så den tar imot et argument (en tekststreng) som så skrives til nettsiden</div>
+			</div>
+
+			<p>Løsningsforslag:</p>
+
+			<pre class="pre-block">
+function output(<code>myText</code>) {
+	document.getElementById('my-output').innerHTML += <code>myText</code> + "&lt;br&gt;"
+}
+
+output('Dæggern, æ kode som ei 👵🏻')</pre>
+			<pre class="result">Dæggern, æ kode som ei 👵🏻</pre>
 		</li>
 	</ol>
 
-	<a href="utfordring-2.html">Gå til utfordring 2 👉</a>
+	<hr>
+
+	<h2>👨🏼‍💻 Ekstraoppgaver</h2>
+	<ol>
+		<li>Juster CSS-en så teksten blir grønn, på svart bakgrunn (som i Matrix)</li>
+		<li>Bruk en løkke ("loop" på engelsk) for å skrive teksten 100 ganger (som i Matrix)</li>
+		<li>Modifiser javascript- og html-koden slik at teksten skrives til to forskjellige steder på nettsiden</li>
+	</ol>
+
+	<a href="utfordring-2.html" class="btn">Gå til utfordring 2 👉</a>
 </body>
 </html>
