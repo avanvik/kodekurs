@@ -31,6 +31,10 @@ h2 {
 	font-family: "IBM Plex Sans", serif;
 }
 
+h3 {
+	margin: 0.5em 0;
+}
+
 ol {
 	padding-left: 30px;
 }
@@ -65,4 +69,12 @@ code {
 	border: 1px solid #eee;
 	border-radius: 2px;
 	padding: 10px;
+}
+
+.article-list-item {
+	margin: 40px 0;
+}
+
+.tagline {
+	opacity: 0.6;
 }
