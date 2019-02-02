@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Utfordring 01</h1>
-	<a href="../index.html">Tilbake til index</a>
+	<a href="../index.html">👈 Tilbake til index</a>
 		
 	<h2>👨🏼‍💻 Bruk javascript for å skrive til nettsiden</h2>
 	<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven. Det er lov å Google ting</p>
@@ -29,28 +29,28 @@
 		<li>
 			<p>Dette er noe vi kan gjenbruke! La oss lage en funksjon for å skrive ting til nettsiden. Funksjonen kan hete <code>output()</code>. Legg til en &lt;br&gt; for å skrive på ny linje hver gang funsjonen kjører.</p>
 			<pre class="pre-block">
-	function output() {
-		document.getElementById('my-output').innerHTML += "Hello World" + "&lt;br&gt;"
-	}</pre>
+function output() {
+	document.getElementById('my-output').innerHTML += "Hello World" + "&lt;br&gt;"
+}</pre>
 		</li>
 		
 		<li>
 			<p>Denne funksjonen skriver jo kun "Hello World". For å kunne skrive hva som helst hadde det vært lurt å bruke en variabel her. En variabel som settes når man kjører en funksjon kalles et "argument". Slik:</p>
 			<pre class="pre-block">
-	function output(<code>axelsText</code>) {
-		document.getElementById('my-output').innerHTML += <code>axelsText</code> + "&lt;br&gt;"
-	}</pre>
+function output(<code>axelsText</code>) {
+	document.getElementById('my-output').innerHTML += <code>axelsText</code> + "&lt;br&gt;"
+}</pre>
 		</li>
 		
 		<li>
 			<p>Nå har vi kun definert funksjonen. For å kjøre den må vi også skrive 			
 			<code>output()</code> etterpå, med en tekststreng som argument.</p>
 		<pre class="pre-block">
-	function output(axelsText) {
-		document.getElementById('my-output').innerHTML += axelsText
-	}
+function output(axelsText) {
+	document.getElementById('my-output').innerHTML += axelsText
+}
 	
-	<code>output('Axel koder som en 👵🏻')</code></pre>
+<code>output('Axel koder som en 👵🏻')</code></pre>
 		</li>
 	</ol>
 

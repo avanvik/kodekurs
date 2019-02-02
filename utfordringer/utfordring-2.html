@@ -10,7 +10,7 @@
 </head>
 <body>
 		<h1>Utfordring 02</h1>
-		<a href="../index.html">Tilbake til index</a>
+		<a href="../index.html">👈 Tilbake til index</a>
 
 		<h2>🎲 Lag en terningsapp</h2>
 		<p>Bruk <a href="https://jsfiddle.net">JSFiddle</a> for å løse denne oppgaven. Det er lov å Google ting</p>
@@ -23,52 +23,52 @@
 			<li>
 				<p>Lag en funksjon som heter <code>throwDice()</code></p>
 				<pre class="pre-block">
-		function throwDice() {
-		
-		}</pre>
+function throwDice() {
+
+}</pre>
 			</li>
 			
 			<li>
 				<p>En terning "genererer" random tall. Det samme kan vi gjøre i JavaScript med den innebygde funksjonen <code>Math.random()</code>. Vi kan bruker output()-funksjonen du lagde tidligere for å se resultatet.</p>
 				<pre class="pre-block">
-		function throwDice() {
-			var random = Math.random()
-			output(random)
-		}</pre>
+function throwDice() {
+	var random = Math.random()
+	output(random)
+}</pre>
 			<pre id="r1" class="result"></pre>
 			</li>
 			
 			<li>
 			<p>Hvis du laster siden på nytt vil du se at tallet endrer seg. Math.random() gir oss et tall mellom 0 og 1, men en terning gir tall mellom 1 og 6. Dette kan vi få til ved å multiplisere Math.random() med 6</p>
 			<pre class="pre-block">
-		function throwDice() {
-			var random = Math.random() * 6
-			output(random)
-		}</pre>
+function throwDice() {
+	var random = Math.random() * 6
+	output(random)
+}</pre>
 			<pre id="r2" class="result"></pre>
 			</li>
 			
 			<li>
 				<p>Nå klarer vi å skrive tall fra 0 til 6. Men, disse tallene har jo masse desimaler! Frykt ei, det finnes en innebygget funksjon som runder av tall oppover, til nærmeste heltall. Denne heter <code>Math.ceil()</code> for ceiling ("tak"). Runde av oppover = "tak", get it?</p>
 				<pre class="pre-block">
-		function throwDice() {
-			var random = Math.random() * 6
-			var result = Math.ceil(random)
-			
-			output(random)
-		}</pre>
+function throwDice() {
+	var random = Math.random() * 6
+	var result = Math.ceil(random)
+	
+	output(random)
+}</pre>
 			<pre id="r3" class="result"></pre>
 			</li>
 			
 			<li>
 				<p>La oss legge til en liten terning-emoji så det ser kulere ut</p>
 				<pre class="pre-block">
-		function throwDice() {
-			var random = Math.random() * 6
-			var result = '🎲 ' + Math.ceil(random)
-			
-			output(random)
-		}</pre>
+function throwDice() {
+	var random = Math.random() * 6
+	var result = '🎲 ' + Math.ceil(random)
+	
+	output(random)
+}</pre>
 			<pre id="r4" class="result"></pre>
 			</li>
 			
@@ -77,38 +77,38 @@
 				<p>I JavaScript finnes noe som heter "løkker", eller "loops" på engelsk. Det finnes flere typer løkker, men den du har lært før bruker en teller <code>i</code> for å gjenta kode <code>i</code> antall ganger.</p>
 				<p><strong>For eksempel</strong> En løkke som skriver "Hei" 10 ganger lager man slik:</p>
 				<pre class="pre-block">
-		for (var i=0; i&lt;10; i++){
-			output("Hei")
-		}</pre>
+for (var i=0; i&lt;10; i++){
+	output("Hei")
+}</pre>
 		
 			<p>Dette kan vi bruke for å kaste <code>i</code> antall terninger. Vi kan også gi funksjonen vår et argument som forteller hvor mange terninger som skal kastes.</p>
 			<pre class="pre-block">
-		function throwDice(numberOfDice) {
-			for (var i=0; i&lt;numberOfDice; i++){
-				var random = Math.random() * 6
-				var result = '🎲 ' + Math.ceil(random)
-				
-				output(result)
-			}
-		}</pre>
+function throwDice(numberOfDice) {
+	for (var i=0; i&lt;numberOfDice; i++){
+		var random = Math.random() * 6
+		var result = '🎲 ' + Math.ceil(random)
+		
+		output(result)
+	}
+}</pre>
 			<pre id="r5" class="result"></pre>
 			</li>
 			
 			<li>
 				<p>Hvis vi vil vise terningene på samme linje kan vi modifisere koden slik</p>
 				<pre class="pre-block">
-		function throwDice(numberOfDice) {
-			var <code>totalResult = ''</code>
-			
-			for (var i=0; i&lt;numberOfDice; i++){
-				var random = Math.random() * 6
-				var result = '🎲 ' + Math.ceil(random)
-				
-				totalResult += result + '  '
-			}
-			
-			output( <code>totalResult</code> )
-		}</pre>
+function throwDice(numberOfDice) {
+	var <code>totalResult = ''</code>
+	
+	for (var i=0; i&lt;numberOfDice; i++){
+		var random = Math.random() * 6
+		var result = '🎲 ' + Math.ceil(random)
+		
+		totalResult += result + '  '
+	}
+	
+	output( <code>totalResult</code> )
+}</pre>
 			<pre id="r6" class="result"></pre>
 			</li>
 		</ol>
