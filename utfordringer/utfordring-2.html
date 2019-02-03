@@ -5,8 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Utfordring 2 | Kodekurs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" media="screen" href="../main.css?v=1" />
-	<script src="../main.js"></script>
+	<link id="css" rel="stylesheet" type="text/css" media="screen" href="../main.css" />
 </head>
 <body>
 		<h1>Utfordring 02</h1>
@@ -137,8 +136,9 @@ throwDice(2)</pre>
 
 
 
-
+<script src="../main.js"></script>
 <script>
+
 const randomNumber = Math.random()
 
 function output(text, id) {
@@ -188,7 +188,6 @@ function throwDice6(numberOfDice){
 	}
 	
 	output(totalResult, 'my-output')
-	output(totalResult, 'r6')
 }
 
 
